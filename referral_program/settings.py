@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Third-Party Apps
+    # (https://simpleisbetterthancomplex.com/tutorial/2018/11/22/how-to-implement-token-authentication-using-django-rest-framework.html
+    'rest_framework',
+    'rest_framework.authtoken',
+    'crispy_forms',
+
+    # Local Apps (Your project's apps)
+    'my_api'
 ]
 
 MIDDLEWARE = [
@@ -49,12 +58,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 ROOT_URLCONF = 'referral_program.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +79,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'referral_program.wsgi.application'
+
+
 
 
 # Database
@@ -98,6 +111,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'noreply@cinagi.co.za'
+EMAIL_HOST_PASSWORD = 'P@55w0rd##+1'
+EMAIL_USE_TLS = True
 
 
 # Internationalization

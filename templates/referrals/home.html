@@ -1,0 +1,12 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+     {{ form|crispy }}
+{% for i in object_list %}
+<div class="post-entry">
+
+<p><a href="{% url 'referral_detail' i.pk %}">{{ i.FirstName }} {{ ' ' }} {{ i.Surname }} {{ ' - ' }} {{ i.PolicyNumber }} </a></p>
+</div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,36 @@
+<!-- templates/post_detail.html -->
+
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="post-entry">
+<p>Hi {{ object.FirstName }} {{ '  ' }} {{ object.Surname }}</p>
+<p>Welcome to your very own referral page!</p>
+<p>You can refer your friends in in 2 ways - either share a link they can follow to or give us their details
+    so we can contact them.Remember, if yours friend sign up for Cinagi Gap Cover we will pay you R300 cash.</p>
+
+    <br>
+
+
+<div style="text-align:left;">
+<p style="text-align:left"> 1.Copy your personal link below and share it with the people who you think will be intrested</p>
+    <br>
+<!-- The text field -->
+<input align="center" type="text" value="http://127.0.0.1:8000/referred/new/{{object.pk }}" id="myInput">
+<!-- The button used to copy the text -->
+<button align="center" onclick="myFunction()" style='font-size:16px'>Copy   <i class='far fa-copy'></i> </button>
+<br>
+<br>
+
+    <br>
+    <br>
+<p style="text-align:left"> 2.Share this post with your friends on Facebook by clicking on the FB button</p>
+<br>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.cinagi.co.za%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden"  frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<br>
+</div>
+{% endblock content %}
