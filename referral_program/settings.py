@@ -113,11 +113,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-EMAIL_HOST = 'smtp.office365.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'noreply@cinagi.co.za'
-EMAIL_HOST_PASSWORD = 'P@55w0rd##+1'
-EMAIL_USE_TLS = True
+EMAIL_HOST = ''
+EMAIL_PORT = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = ''
 
 
 # Internationalization
